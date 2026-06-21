@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow&Co. Cosmetic Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<!-- LOGIN -->
+<div id="authModal" class="modal-overlay">
+    <div class="modal-box">
+
+        <h2>Welcome Beautiful ✨</h2>
+        <p>Login to continue shopping</p>
+
+        <button class="btn btn-google"
+        onclick="closeAuth('Google User')">
+            <i class="fab fa-google"></i>
+            Continue with Google
+        </button>
+
+        <button class="btn btn-facebook"
+        onclick="closeAuth('Facebook User')">
+            <i class="fab fa-facebook-f"></i>
+            Continue with Facebook
+        </button>
+
+        <div class="divider">
+            <span>or use phone number</span>
+        </div>
+
+        <div class="phone-input-group">
+            <input
+            type="text"
+            id="userPhone"
+            placeholder="Phone Number">
+
+            <button class="btn btn-phone"
+            onclick="loginPhone()">
+                Login
+            </button>
+        </div>
+
+    </div>
+</div>
+
+
+<header>
+
+    <div class="logo">
+        ✨ Glow&Co.
+        <span>Seller Hub</span>
+    </div>
+
+    <div class="user-badge" id="userInfo">
+        <i class="fa-solid fa-user"></i>
+        Guest Mode
+    </div>
+
+</header>
+
+
+<div class="container">
+
+    <!-- PRODUCT -->
+    <section class="products-section">
+
+        <h2>🎁 Premium Packages</h2>
+
+        <div
+        class="products-grid"
+        id="productsContainer">
+
+        </div>
+
+    </section>
+
+
+    <!-- SIDEBAR -->
+    <aside class="checkout-sidebar">
+
+        <h3>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Your Order
+        </h3>
+
+        <div id="cartItemsList" class="cart-items">
+
+            <p class="empty-msg">
+                No package selected yet.
+            </p>
+
+        </div>
+
+        <hr>
+
+        <div class="price-summary">
+
+            <div class="price-row">
+                <span>Total USD</span>
+
+                <span class="price-usd">
+                    $<span id="totalUSD">
+                        0.00
+                    </span>
+                </span>
+            </div>
+
+            <div class="price-row">
+
+                <span>Total KHR</span>
+
+                <span class="price-khr">
+                    <span id="totalKHR">
+                        0
+                    </span>
+                    ៛
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="location-box">
+
+            <h4>
+                <i class="fa-solid fa-location-dot"></i>
+                Delivery Address
+            </h4>
+
+            <textarea
+            id="deliveryLocation"
+            placeholder="Enter your address">
+            </textarea>
+
+        </div>
+
+
+        <div class="payment-box">
+
+            <h4>
+                <i class="fa-solid fa-qrcode"></i>
+                KHQR Payment
+            </h4>
+
+            <div class="qr-display">
+
+                <img
+                src="image_2eb4fa.jpg"
+                alt="QR">
+
+            </div>
+
+        </div>
+
+        <button
+        class="btn-order"
+        onclick="placeOrder()">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            Place Order
+
+        </button>
+
+    </aside>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
